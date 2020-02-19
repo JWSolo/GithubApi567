@@ -2,6 +2,7 @@
 language: python
 python:
  - "3.7.6"
+ - "requests"
 
 # command to run tests
 script:
