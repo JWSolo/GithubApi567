@@ -5,4 +5,4 @@ python:
 
 # command to run tests
 script:
- - python -m unittest GitHub567
+ - python3 -m unittest GitHub567
