@@ -14,19 +14,15 @@ def GitHub567(github_id):
     for i in range(len(r)):
         repo_list.append(r[i]["name"])
 
+    commit_dict = {}
     for n in range(len(repo_list)):
         get_commits = requests.get(f"https://api.github.com/repos/{github_id}/{repo_list[n]}/commits")
         re = get_commits.json()
+        commit_dict[repo_list[n]] = len(re)
         print(f"AccountID : {github_id} Repo : {repo_list[n]} Number of commits : {len(re)}")
 
-    return repo_list
+    return commit_dict
 
-class TextFunction(unittest.TestCase):
-
-    def test_GitHub567(self):
-
-        self.assertEqual(GitHub567("JWSolo"), ['GithubApi567', 'SSW567', 'Triangle567', 'University-HW10'])
 
 if __name__ == "__main__":
-    unittest.main()
-
+    print(GitHub567("JWSolo"))
