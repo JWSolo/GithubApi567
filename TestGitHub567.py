@@ -5,7 +5,7 @@ import unittest
 class TestCase(unittest.TestCase):
 
     def test_Github567(self):
-        self.assertEqual(GitHub567("JWSolo"), {'GithubApi567': 23, 'SSW567': 7, 'Triangle567': 8, 'University-HW10': 2})
+        self.assertEqual(GitHub567("JWSolo"), {'GithubApi567': 25, 'SSW567': 7, 'Triangle567': 8, 'University-HW10': 2})
 
 
 if __name__ == "__main__":
